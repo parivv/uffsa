@@ -63,9 +63,9 @@ const Apparel = () => {
         <div className="apparel-item">
           <img src={SP25HoodFront} alt="Spring 2025 Hoodie Front" className="sp25-apparel-cover"
           onMouseEnter={hoodie25HoverEnter} onMouseLeave={hoodie25HoverLeave}/>
-          <div className="order-button">
+          <Link className="order-button" to="/order?apparel=sp25hoodie">
             Order
-          </div>
+          </Link>
         </div>
       </div>
 

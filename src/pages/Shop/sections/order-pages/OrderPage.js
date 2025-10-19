@@ -13,6 +13,12 @@ const apparelData = {
         price: 15.00,
         imgFront: SP25ShirtFront,
         imgBack: SP25ShirtBack
+    },
+    'sp25hoodie' : {
+        name: 'Spring 2025 Hoodie',
+        price: 22.00,
+        imgFront: SP25HoodieFront,
+        imgBack: SP25HoodieBack
     }
 };
 
@@ -55,8 +61,16 @@ const OrderPage = () => {
     return(
         <>
             <div className='order-page-main'>
-                <div>
-                    <h2>{product.name}</h2>
+                <div className='product-name-and-image'>
+                    <h2>{product.name} | ${product.price}</h2>
+                    <img src={product.imgFront} alt={product.name} className='product-image'/>
+                </div>
+                <div className='gap'>
+
+                </div>
+                <div className='sizing-and-order'>
+                    Sizing and Payment Option Buttons on right side of page.
+                    Still need to fix sizing and design.
                 </div>
             </div>
         </>

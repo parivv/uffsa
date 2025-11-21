@@ -2,6 +2,7 @@ import React from 'react';
 import './MAFFIA.css';
 
 import MaffiaTitle from '../../../components/titles/MAFFIA Title/MaffiaTitle';
+import InstagramPost from "../../../components/InstaPosts/InstagramPost";
 
 const MAFFIA = () => {  
     return (<>
@@ -37,7 +38,7 @@ const MAFFIA = () => {
               </p>
 
               <p>
-                The choice is yours! Enhance your experience in FSA and join our team today :}
+                The choice is yours! Enhance your experience in FSA and join our team today {":}"}
               </p>
             </div>
 
@@ -54,13 +55,16 @@ const MAFFIA = () => {
               </div>
             </div>
 
+            <figure className="maffia-insta">
+              <InstagramPost
+                url="https://www.instagram.com/p/DOewZTVjd9C/?utm_source=ig_web_copy_link&igsh=b3hieDF1N2EyeGJ6" 
+              />
+            </figure>
+
             <div className='apply-button__container'>
-              <a>
-                  <button className="apply-button title">
-                    APPLY NOW!
-                    Apps Closed — Open in Spring !
-                  </button>
-              </a>
+              <button className="apply-button title">
+                 Apps Closed — Open in Spring !
+              </button>
             </div>
           </section>
 

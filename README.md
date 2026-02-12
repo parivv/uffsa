@@ -1,112 +1,157 @@
 # UFFSA Website
 
-http://uffsa.net
+Official website for the University of Florida Filipino Student Association.
 
-This is an open source project. We welcome contributions from UFFSA Web Interns!
+## 🏗️ Project Structure
 
-## Get Started
-
-1. Clone the repository
-
-   `git clone https://github.com/jareuhmee/uffsa.git`
-
-2. Navigate to the local project directory
-
-   `cd uffsa`
-
-3. Install node modules
-
-   `npm install`
-
-4. Run the app in development mode
-
-   `npm run start`
-
-## How to Contribute
-
-We welcome contributions! Before starting work on any feature or fix, please follow these steps:
-
-### 1. Find or Create an Issue
-
-- Browse the [Issues](https://github.com/jareuhmee/uffsa/issues) page to find something you'd like to work on
-- Comment on the issue expressing your interest in taking it on
-- Wait for approval from a maintainer before proceeding
-
-### 2. Fork and Clone the Repository
-
-1. Fork the repository by clicking the "Fork" button at the top right of the repository page
-
-2. Clone your forked repository
-
-   `git clone https://github.com/<your-username>/uffsa.git`
-
-3. Navigate to the local project directory
-
-   `cd uffsa`
-
-4. Add the original repository as an upstream remote
-
-   `git remote add upstream https://github.com/jareuhmee/uffsa.git`
-
-### 3. Set Up Your Development Environment
-
-1. Install node modules
-
-   `npm install`
-
-2. Run the app in development mode
-
-   `npm run start`
-
-### 4. Make Your Changes
-
-1. Create a new branch for your work (use a descriptive name related to the issue)
-
-   `git checkout -b feature/your-feature-name`
-
-2. Make your changes to the code!
-
-3. Test your changes to ensure everything works as expected
-
-### 5. Submit Your Changes
-
-1. Stage your changes for commit
-
-   `git add .`
-
-2. Commit your changes with a descriptive message
-
-   `git commit -m "Add feature: brief description of what you did"`
-
-3. Push your changes to your fork
-
-   `git push origin feature/your-feature-name`
-
-4. Open a pull request on GitHub:
-
-   - Go to your fork on GitHub
-   - Click "Compare & pull request"
-   - **Important**: Make sure to set the base branch to the current sprint branch (e.g., `sprint-1`, `sprint-2`, etc.), NOT `main`
-   - Fill out the pull request template with details about your changes
-   - Reference the issue number in your PR description (e.g., "Closes #123")
-
-5. Wait for a code review and address any feedback
-
-### 6. Keep Your Fork Updated
-
-Before starting new work, sync your fork with the upstream repository:
-
-```bash
-git checkout main
-git fetch upstream
-git merge upstream/main
-git push origin main
+```
+├── frontend/          # React frontend application
+├── backend/           # Express backend API
+├── vercel.json        # Vercel deployment configuration
+└── VERCEL_DEPLOYMENT.md  # Detailed deployment guide
 ```
 
-**Note**: Always create pull requests against the active sprint branch, not the main branch. Check the repository or ask maintainers which sprint branch is currently active.
+## 🚀 Quick Start
 
-#### Created by:
+### Prerequisites
 
-<a href="https://github.com/jareuhmee/uffsa/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=jareuhmee/uffsa" />
-</a>
+- Node.js (v18 or higher)
+- npm or yarn
+- PostgreSQL database (Neon recommended)
+
+### Local Development
+
+**1. Install Dependencies**
+
+```bash
+# Install backend dependencies
+cd backend
+npm install
+
+# Install frontend dependencies
+cd ../frontend
+npm install
+```
+
+**2. Configure Backend**
+
+```bash
+cd backend
+cp .env.example .env
+# Edit .env and add your DATABASE_URL
+```
+
+**3. Start Development Servers**
+
+```bash
+# Terminal 1 - Backend (from backend/)
+npm run dev
+
+# Terminal 2 - Frontend (from frontend/)
+npm start
+```
+
+- Frontend: http://localhost:3000
+- Backend API: http://localhost:5000
+
+## 📦 Tech Stack
+
+### Frontend
+
+- React 18
+- Material-UI (MUI)
+- React Router
+- Typewriter Effect
+
+### Backend
+
+- Node.js + Express
+- PostgreSQL (Neon)
+- Drizzle ORM
+- bcrypt for password hashing
+
+## 🌐 Deployment
+
+This project is configured for deployment on Vercel.
+
+See [VERCEL_DEPLOYMENT.md](./VERCEL_DEPLOYMENT.md) for complete deployment instructions.
+
+**Quick Deploy:**
+
+```bash
+npm install -g vercel
+vercel
+```
+
+## 🔧 Available Scripts
+
+### Frontend
+
+- `npm start` - Start development server
+- `npm run build` - Build for production
+- `npm run vercel-build` - Build for Vercel deployment
+- `npm test` - Run tests
+
+### Backend
+
+- `npm run dev` - Start development server with auto-reload
+- `npm start` - Start production server
+- `npm run db:push` - Push schema changes to database
+- `npm run db:studio` - Open Drizzle Studio (database GUI)
+- `npm run db:generate` - Generate database migrations
+- `npm run db:migrate` - Run database migrations
+
+## 🗂️ API Routes
+
+Base URL (Production): `https://uffsa.net/api`
+Base URL (Development): `http://localhost:5000/api`
+
+### Endpoints
+
+- `GET /` - Health check
+- `GET /api/users` - Get all users
+- `POST /api/users` - Create new user
+- `GET /api/users/:id` - Get user by ID
+- `PUT /api/users/:id` - Update user
+- `DELETE /api/users/:id` - Delete user
+
+## 🔐 Environment Variables
+
+### Backend
+
+Create a `.env` file in the `backend/` directory:
+
+```env
+DATABASE_URL=postgresql://user:password@host/database?sslmode=require
+PORT=5000
+NODE_ENV=development
+FRONTEND_URL=http://localhost:3000
+```
+
+### Frontend
+
+Environment variables are auto-loaded:
+
+- `.env.development` - Used during `npm start`
+- `.env.production` - Used during `npm run build`
+
+## 👥 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is maintained by UF Filipino Student Association.
+
+## 🔗 Links
+
+- **Website**: [uffsa.net](https://uffsa.net)
+- **Instagram**: [@uffsa](https://instagram.com/uffsa)
+
+---
+
+Built with ❤️ by UFFSA Web Team

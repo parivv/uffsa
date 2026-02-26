@@ -3,20 +3,20 @@ import './WebInterns.css'
 
 import Default from './photos/default.png';
 import Lynette from './photos/Lynette.JPG';
-import RJ from './photos/RJ.JPG';
-import Matt from './photos/Matt.JPG';
-import Jaden from './photos/Jaden.JPG';
-import Alex from './photos/Alex.JPG';
-import Andrew from './photos/Andrew.JPG';
-import Brian from './photos/Brian.JPG';
-import Joyce from './photos/Joyce.JPG';
-import Kyle from './photos/Kyle.JPG';
-import Nate from './photos/Nate.JPG';
-import Pari from './photos/Pari.JPG';
+import RJ from './photos/RJ.jpg';
+import Matt from './photos/Matt.jpg';
+import Jaden from './photos/Jaden.jpg';
+import Alex from './photos/Alex.jpg';
+import Andrew from './photos/Andrew.jpg';
+import Brian from './photos/Brian.jpg';
+import Joyce from './photos/Joyce.jpg';
+import Kyle from './photos/Kyle.jpg';
+import Nate from './photos/Nate.jpg';
+import Pari from './photos/Pari.jpg';
 import Patrick from './photos/Patrick.jpg';
-import Ronald from './photos/Ronald.JPG';
-import Vyan from './photos/Vyan.JPG';
-import Xenia from './photos/Xenia.JPG';
+import Ronald from './photos/Ronald.jpg';
+import Vyan from './photos/Vyan.jpg';
+import Xenia from './photos/Xenia.jpg';
 
 const WebInterns = () => {
     return (
